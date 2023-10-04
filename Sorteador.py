@@ -38,3 +38,4 @@ while True:
     elif lista_de_exercicios == 8:
         print(f'O exercicio será: {classes}')
         break
+        
