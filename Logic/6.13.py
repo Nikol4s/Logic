@@ -1,17 +1,19 @@
 import random
 
-def sorteador_palavras(op):
-    palavra = random.choice(op)
-    print(palavra)
+# Variáveis
+linha1 = 25 * "-"
 
-def embaralhar_palavra(palavra):
-    lista_de_caracteres = list(palavra)
-    random.shuffle(lista_de_caracteres)
-    palavra_embaralhada = "".join(lista_de_caracteres)
-    return palavra_embaralhada
+# Descrisão
+titulo = f"{linha1}\nPalavras Embaralhadas"
+tabela_temas = f"""
+{linha1}
+Digite (1) -> Animais
+Digite (2) -> Frutas
+Digite (3) -> Profissões
+{linha1}
+                """
 
-
-# lista de palavra: temas
+# Palavras dos temas
 palavras_animais = [
     "onça-pintada",
     "peru",
@@ -49,15 +51,28 @@ palavras_profissões = [
     "carpinteiro",
 ]
 
-palavras_embaralhadas_frutas = [
-    embaralhar_palavra(palavra) for palavra in palavras_frutas
-]
-palavras_embaralhadas_animais = [
-    embaralhar_palavra(palavra) for palavra in palavras_animais
-]
-palavras_embaralhadas_profissões = [
-    embaralhar_palavra(palavra) for palavra in palavras_profissões
-]
+palavras_temas = palavras_animais, palavras_frutas, palavras_profissões
+
+# Funções
+def sorteador_palavras(lista):
+    palavra = random.choice(lista)
+    return palavra
+
+def embaralhar_palavra(palavra):
+    lista_de_caracteres = list(palavra)
+    random.shuffle(lista_de_caracteres)
+    palavra_embaralhada = "".join(lista_de_caracteres)
+    return palavra_embaralhada
+
 
 while True:
-    
+    print(titulo, tabela_temas)
+    tema = str(input("Digite qual será o tema do jogo: "))
+
+    if tema == "1":
+        print(f"{linha1}\nTema: Animais")
+
+        palavras_sendo_embaralhadas = [
+            embaralhar_palavra(palavra_sorteada)
+            for palavra_sorteada in palavras_animais
+        ]
