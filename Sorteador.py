@@ -1,41 +1,38 @@
-from random import randint
+import random
+import os
+def sorteador(minimo, maximo):
+    sorteando = random.randint(minimo, maximo)
+    return sorteando
 
-lista_de_exercicios = randint(1, 8)
-
-sequencial = randint(1, 18)
-decisao = randint(1, 28)
-repeticao = randint(1, 51)
-lista = randint(1, 24)
-funcoes = randint(1, 14)
-strings = randint(1, 14)
-arquivos = randint(1, 2)
-classes = randint(1, 17)
-
-while True:
-    sorteador = int(input('Digite "0" para sortear...\n  '))
-    print(f'Número sorteado: {lista_de_exercicios}')
-    if lista_de_exercicios == 1:
-        print(f'O exercicio será: {sequencial}')
-        break
-    elif lista_de_exercicios == 2:
-        print(f'O exercicio será: {decisao}')
-        break
-    elif lista_de_exercicios == 3:
-        print(f'O exercicio será: {repeticao}')
-        break
-    elif lista_de_exercicios == 4:
-        print(f'O exercicio será: {lista}')
-        break
-    elif lista_de_exercicios == 5:
-        print(f'O exercicio será: {funcoes}')
-        break
-    elif lista_de_exercicios == 6:
-        print(f'O exercicio será: {strings}')
-        break
-    elif lista_de_exercicios == 7:
-        print(f'O exercicio será: {arquivos}')
-        break
-    elif lista_de_exercicios == 8:
-        print(f'O exercicio será: {classes}')
-        break
-        
+l1 = 10 * '-'
+l2 = 46 * '-'
+exercicioLista = sorteador(1, 7)
+os.system('cls')
+if exercicioLista == 1:
+    print(f'{l1} Sequencial {l1}')
+    print(f'Exercício: {sorteador(1, 18)}\n{l2}')
+    print('https://wiki.python.org.br/EstruturaSequencial')
+elif exercicioLista == 2:
+    print(f'{l1} Decisão {l1}')
+    print(f'Exercício: {sorteador(1, 28)}\n{l2}')
+    print('https://wiki.python.org.br/EstruturaDeDecisao')
+elif exercicioLista == 3:
+    print(f'{l1} Repetição {l1}')
+    print(f'Exercício: {sorteador(1, 51)}\n{l2}')
+    print('https://wiki.python.org.br/EstruturaDeRepeticao')
+elif exercicioLista == 4:
+    print(f'{l1} Lista {l1}')
+    print(f'Exercício: {sorteador(1, 24)}\n{l2}')
+    print('https://wiki.python.org.br/ExerciciosListas')
+elif exercicioLista == 5:
+    print(f'{l1} Funções {l1}')
+    print(f'Exercício: {sorteador(1, 14)}\n{l2}')
+    print('https://wiki.python.org.br/ExerciciosFuncoes')
+elif exercicioLista == 6:
+    print(f'{l1} Strings {l1}')
+    print(f'Exercício: {sorteador(1, 14)}\n{l2}')
+    print('https://wiki.python.org.br/ExerciciosComStrings')
+elif exercicioLista == 7:
+    print(f'{l1} Classes {l1}')
+    print(f'Exercício: {sorteador(1, 17 )}\n{l2}')
+    print('https://wiki.python.org.br/ExerciciosClasses')
