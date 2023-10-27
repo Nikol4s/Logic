@@ -3,7 +3,6 @@ from prettytable import PrettyTable
 
 ListaColaboradores = []
 
-# Cria uma tabela
 tabela = PrettyTable()
 tabela.field_names = ['Salário', 'Abono']
 
